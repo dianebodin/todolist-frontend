@@ -57,7 +57,7 @@ const App = () => {
 
   const handleClickCheck = async (i) => {
     try {
-      await axios.put(`https://todolist-backend-db.herokuapp.com//check/${i}`)
+      await axios.put(`https://todolist-backend-db.herokuapp.com/check/${i}`)
       .then(() => {
         axios.get("https://todolist-backend-db.herokuapp.com/")
         .then((response) => {
