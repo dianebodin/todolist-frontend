@@ -1,0 +1,104 @@
+body {
+  background: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+}
+.body {
+  display: flex;
+}
+.container {
+  background: white;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  margin: 60px auto;
+  border-radius: 5px;
+}
+h1 {
+  color: #5c47d3;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+form > input {
+  background: #f2f7fd;
+  flex: 4;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+form > input:first-child {
+  padding-left: 10px;
+}
+form > input:last-child {
+  background: #5c47d3;
+  border: 1px solid #5c47d3;
+  color: white;
+  flex: 1;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 80px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+form > input:last-child:hover {
+  border: 1px solid #5c47d3;
+  background: white;
+  color: #5c47d3;
+}
+.task {
+  margin-top: 6px;
+  margin-left: 6px;
+  width: 100%;
+}
+ul {
+  list-style: none;
+  width: 85%;
+}
+li {
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  height: 45px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.check, .trash {
+  cursor: pointer;
+  margin-right: 12px;
+  float: right;
+}
+li > div {
+  display: flex;
+}
+li > div > span:first-child {
+  width: 70%;
+  display: flex;
+}
+li > div > span:last-child {
+  width: 30%;
+}
+.err-msg {
+  font-size: 10px;
+  color: red;
+  width: 85%;
+}
+
+@media (max-width: 750px) {
+  li {
+    height: 60px;
+  }
+}
