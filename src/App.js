@@ -36,6 +36,7 @@ const App = () => {
       const titles = tasks.map(e => { return e.title }); //on récupère tous les titres
       if (!input || input.trim().length === 0) setError(1);
       else if (titles.includes(input)) setError(2);
+      else if (input.length > 30) setError(3);
       else {
         await axios.post("http://localhost:3000/create", {
           title: input,

@@ -13,6 +13,7 @@ const Form = (props) => {
 
       {error === 1 ? <div className="err-msg">Champs à remplir</div> : null}
       {error === 2 ? <div className="err-msg">Tâche déjà existante</div> : null}
+      {error === 3 ? <div className="err-msg">Doit contenir moins de 30 caractères</div> : null}
     </>
   );
 }
