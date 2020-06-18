@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://todolist-backend-db.herokuapp.com/");
+        const response = await axios.get(`${process.env.REACT_APP_PATH_BACKEND}/`);
         setTasks(response.data);
         setIsLoading(false);
       } catch (error) { console.log(error.message); }
@@ -38,12 +38,13 @@ const App = () => {
       else if (titles.includes(input)) setError(2);
       else if (input.length > 30) setError(3);
       else {
-        await axios.post("https://todolist-backend-db.herokuapp.com/create", {
+        await axios.post(`https://todolist-backend-db.herokuapp.com/create`, {
           title: input,
           done: "false"
           }
-        ).then(() => {
-          axios.get("https://todolist-backend-db.herokuapp.com/")
+        )
+        .then(() => {
+          axios.get(`${process.env.REACT_APP_PATH_BACKEND}/`)
           .then((response) => {
             setTasks(response.data);
             setInput(""); //vider
@@ -57,9 +58,9 @@ const App = () => {
 
   const handleClickCheck = async (i) => {
     try {
-      await axios.put(`https://todolist-backend-db.herokuapp.com/check/${i}`)
+      await axios.put(`${process.env.REACT_APP_PATH_BACKEND}/check/${i}`)
       .then(() => {
-        axios.get("https://todolist-backend-db.herokuapp.com/")
+        axios.get(`${process.env.REACT_APP_PATH_BACKEND}/`)
         .then((response) => {
           setTasks(response.data);
         })
@@ -70,9 +71,9 @@ const App = () => {
 
   const handleClickRemove = async (i) => {
     try {
-      await axios.delete(`https://todolist-backend-db.herokuapp.com/delete/${i}`)
+      await axios.delete(`${process.env.REACT_APP_PATH_BACKEND}/delete/${i}`)
       .then(() => {
-        axios.get("https://todolist-backend-db.herokuapp.com/")
+        axios.get(`${process.env.REACT_APP_PATH_BACKEND}/`)
         .then((response) => {
           setTasks(response.data);
         })

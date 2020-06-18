@@ -1,13 +1,14 @@
 # todolist-frontend
   
 > React
-  
-  
-#### Commande
-```javascript
+    
+## Running
+```
+git clone https://github.com/dianebodin/todolist-frontend.git
+cd todolist-frontend
+yarn
 yarn start
 ```
-
-
-#### Résultat
-<https://todolist-dianebodin.netlify.app>
+     
+## Demo
+https://todolist-dianebodin.netlify.app

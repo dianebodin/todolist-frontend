@@ -8,8 +8,6 @@ const Task = (props) => {
 
 
   return (
-    <>
-
     <ul>
       {tasks.length > 0 && tasks.map((task, i) => {
         
@@ -30,9 +28,6 @@ const Task = (props) => {
         );
       })}
     </ul>
-
-
-    </>
   );
 }
 
