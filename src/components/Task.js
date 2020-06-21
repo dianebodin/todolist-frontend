@@ -10,7 +10,6 @@ const Task = (props) => {
   return (
     <ul>
       {tasks.length > 0 && tasks.map((task, i) => {
-        
         return (
           <li key={i} style={{ backgroundColor: task.done ? "#f2f2f2" : "white" }}>
             <div className="task">

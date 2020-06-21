@@ -14,6 +14,7 @@ body {
   padding: 30px;
   margin: 60px auto;
   border-radius: 5px;
+  position: relative;
 }
 h1 {
   color: #5c47d3;
@@ -94,11 +95,17 @@ li > div > span:last-child {
 .err-msg {
   font-size: 10px;
   color: red;
-  width: 85%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 18px;
+  left: 11%;
 }
 
 @media (max-width: 750px) {
   li {
     height: 60px;
+  }
+  .err-msg {
+    left: 15%;
   }
 }

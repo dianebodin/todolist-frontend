@@ -38,7 +38,7 @@ const App = () => {
       else if (titles.includes(input)) setError(2);
       else if (input.length > 30) setError(3);
       else {
-        await axios.post(`https://todolist-backend-db.herokuapp.com/create`, {
+        await axios.post(`${process.env.REACT_APP_PATH_BACKEND}/create`, {
           title: input,
           done: "false"
           }
