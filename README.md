@@ -10,5 +10,11 @@ yarn
 yarn start
 ```
      
-## Demo
+## Website
 https://todolist-dianebodin.netlify.app
+
+## Demo
+
+<p align="center">
+	<img src="https://github.com/dianebodin/todolist-frontend/blob/master/view/video.gif" width="800">
+</p>
