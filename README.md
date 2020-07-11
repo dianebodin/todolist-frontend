@@ -10,7 +10,7 @@ yarn
 yarn start
 ```
      
-## Website
+## Webapp
 https://todolist-dianebodin.netlify.app
 
 ## Demo
